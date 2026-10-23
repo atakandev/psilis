@@ -111,7 +111,10 @@ export const Contact = ({ c, g, sent }) => (
 export const Footer = ({ c, g }) => (
   <footer><div className="container">
     <div className="footer-top">
-      <div className="footer-brand"><img src={g.logo} alt={c.brand} /><div><div className="name">{c.brand}</div></div></div>
+      <div className="footer-brand">
+        <img src={g.logo} alt={c.brand} className="footer-logo" />
+        <div className="footer-brand-name">{c.brand}</div>
+      </div>
       <div className="footer-cols">
         {c.cols.map((col, i) => <div className="footer-col" key={i}><h4>{col.title}</h4>{col.items.map((t, j) => <div key={j}>{t}</div>)}</div>)}
       </div>
